@@ -39,9 +39,9 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{ marginTop: "60px" }}>
       <h1>
-        know the 🐻 <span style={{ color: "blue" }}>Animals</span>
+        Know the 🐻 <span style={{ color: "blue" }}>Animals</span>
       </h1>
       {/* <p style = {{padding: "1em"}}>Also you can search with animal name</p> */}
       <input
