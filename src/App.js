@@ -9,15 +9,17 @@ const emojiDictionary = {
   "🦝": "Raccon",
   "🐅": "Tiger",
   "🐎": "Horse",
+  "🦓": "Zebra",
+  "🦌": "Deer",
+  "🐖": "Pig",
+  "🐐": "Goat"
 
-   /** add some more to show how the app now expands when there's new data */
+  /** add some more to show how the app now expands when there's new data */
 };
-
 
 const emojis = Object.keys(emojiDictionary);
 
 export default function App() {
-
   const [emoji, setEmoji] = useState(""); /** concept 2 is useState */
   const [meaning, setMeaning] = useState("translation will appear here..");
 
@@ -36,15 +38,12 @@ export default function App() {
     setMeaning(emojiDictionary[inputEmoji]);
   }
 
-  
-
-
-
   return (
     <div className="App">
-      <h1>know the 🐻 <span style={{color: "blue"}}>Animals</span></h1>
+      <h1>
+        know the 🐻 <span style={{ color: "blue" }}>Animals</span>
+      </h1>
       {/* <p style = {{padding: "1em"}}>Also you can search with animal name</p> */}
-      
       <input
         onChange={changeHandler}
         value={emoji}
@@ -54,8 +53,7 @@ export default function App() {
           minWidth: "80%"
         }}
       />
-
-      <h2 style = {{paddingTop: "0.5em"}}> {emoji} </h2> {/** Concept 1: JSX */}
+      <h2 style={{ paddingTop: "0.5em" }}> {emoji} </h2> {/** Concept 1: JSX */}
       <h3> {meaning} </h3> {/** how much part is re-rendered. */}
       {
         /** Bonus feature; if time permmits */
@@ -73,7 +71,6 @@ export default function App() {
           </span>
         ))
       }
-  
     </div>
   );
 }
